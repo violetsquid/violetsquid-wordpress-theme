@@ -16,8 +16,8 @@
 		<?php
 		printf(
 			/* Translators: WordPress link. */
-			esc_html__( 'Proudly powered by %s', 'twentytwentythree' ),
-			'<a href="' . esc_url( __( 'https://wordpress.org', 'twentytwentythree' ) ) . '" rel="nofollow">WordPress</a>'
+			esc_html__( 'Always open source. Proudly %s', 'twentytwentythree' ),
+			'<a href="' . esc_url( __( 'https://wordpress.org', 'twentytwentythree' ) ) . '" rel="nofollow">WordPress</a>.'
 		)
 		?>
 		</p>
