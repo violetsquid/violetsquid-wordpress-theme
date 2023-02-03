@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Default Footer
- * Slug: twentytwentythree/footer-default
+ * Slug: violetsquid/footer-default
  * Categories: footer
  * Block Types: core/template-part/footer
  */
@@ -16,8 +16,8 @@
 		<?php
 		printf(
 			/* Translators: WordPress link. */
-			esc_html__( 'Always open source. Proudly %s', 'twentytwentythree' ),
-			'<a href="' . esc_url( __( 'https://wordpress.org', 'twentytwentythree' ) ) . '" rel="nofollow">WordPress</a>.'
+			esc_html__( 'Always open source. Proudly %s', 'violetsquid' ),
+			'<a href="' . esc_url( __( 'https://wordpress.org', 'violetsquid' ) ) . '" rel="nofollow">WordPress</a>.'
 		)
 		?>
 		</p>
