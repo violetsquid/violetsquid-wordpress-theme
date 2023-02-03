@@ -1,0 +1,9 @@
+:is(.wp-block-navigation__submenu-container, #dummy-id) {
+    background-color: var(--wp--preset--color--base);
+    color: inherit;
+    border: none;
+}
+
+:is(.wp-block-navigation__submenu-container, #dummy-id) a {
+    justify-content: flex-end;
+}
