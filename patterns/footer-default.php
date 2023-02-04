@@ -16,9 +16,14 @@
 		<?php
 		printf(
 			/* Translators: WordPress link. */
-			esc_html__( 'Always open source. Proudly %s', 'violetsquid' ),
+			esc_html__( 'Always %s', 'violetsquid' ),
+			'<a href="' . esc_url( __( 'https://github.com/orgs/violetsquid/', 'violetsquid' ) ) . '" rel="nofollow">open source</a>. '
+		);
+		printf(
+			/* Translators: WordPress link. */
+			esc_html__( 'Proudly %s', 'violetsquid' ),
 			'<a href="' . esc_url( __( 'https://wordpress.org', 'violetsquid' ) ) . '" rel="nofollow">WordPress</a>.'
-		)
+		);
 		?>
 		</p>
 		<!-- /wp:paragraph -->
