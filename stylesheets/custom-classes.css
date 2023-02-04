@@ -1,0 +1,38 @@
+:is(.invert-color-theme, #dummy-id) {
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--base);
+}
+
+.invert-color-theme :is(hr, #dummy-id) {
+    color: var(--wp--preset--color--base);
+}
+
+.invert-color-theme :is(a, h1, h2, h3, h4, h5, h6, h7, h8, #dummy-id) {
+    background-color: inherit;
+    color: inherit;
+}
+
+:is(.justify, #dummy-id) {
+    text-align: justify;
+}
+
+:is(.wp-block-columns.is-style-overlapping, #dummy-id) .wp-block-column {
+    margin: 0 var(--wp--preset--spacing--20) 0 var(--wp--preset--spacing--20);
+    grid-row-start: 1;
+}
+
+:is(.wp-block-columns.is-style-overlapping, #dummy-id) {
+    flex: none;
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+}
+
+:is(.wp-block-columns.is-style-overlapping, #dummy-id) figure {
+    max-height: 60svh;
+}
+
+.wp-block-columns.is-style-overlapping.is-style-overlapping-left .wp-block-column:nth-child(1) { grid-column: 1 / 15; z-index: 100; background-color: rgba(0,0,0,0.15); border-radius: 15px; padding: var(--wp--preset--spacing--20); box-sizing: border-box; }
+.wp-block-columns.is-style-overlapping.is-style-overlapping-left .wp-block-column:nth-child(2) { grid-column: 10 / 20; }
+
+.wp-block-columns.is-style-overlapping.is-style-overlapping-right .wp-block-column:nth-child(1) { grid-column: 1 / 12; }
+.wp-block-columns.is-style-overlapping.is-style-overlapping-right .wp-block-column:nth-child(2) { grid-column: 5 / 20; z-index: 100; background-color: rgba(0,0,0,0.15); border-radius: 15px; padding: var(--wp--preset--spacing--20); box-sizing: border-box;}
