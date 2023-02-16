@@ -114,127 +114,84 @@ body {
 }
 
 
-
-div.is-style-homepage-rfi-custom {
-    display: flex;
-    flex-wrap: nowrap;
-    font-family: var(--wp--preset--font-family--comfortaa);
-    font-size: var(--wp--preset--font-size--medium);
-}
-
-@keyframes hover-opacity-fade-in {
-
-}
-
-div.is-style-homepage-rfi-custom :is(input, button) {
-    box-sizing: border-box;
-    border: 0;
-    border-radius: 15px;
-    height: 3em;
-    padding: 1em;
-    font-family: inherit;
-    font-size: inherit;
-}
-
-div.is-style-homepage-rfi-custom input {
-    opacity: 0.8;
-}
-
-div.is-style-homepage-rfi-custom button {
-    background-color: var(--wp--preset--color--contrast);
-    color: var(--wp--preset--color--base);
-}
-
-div.is-style-homepage-rfi-custom :is(input:hover, input:active, input:focus) {
-    opacity: 1;
-}
-
-form.is-style-homepage-rfi-custom {
-    width: 100%;
-    flex-wrap: none;
-}
-
-form.is-style-homepage-rfi-custom * {
-    margin-right: 0;
-    margin-left: 0;
-    margin: 0;
-    padding: 1em;
-    font-family: var(--wp--preset--font-family--comfortaa);
+.homepage-rfi-form {
     font-size: var(--wp--preset--font-size--small);
+    font-family: var(--wp--preset--font-family--comfortaa);
 }
 
-form.is-style-homepage-rfi-custom label {
-    display: none;
-    margin: inherit;
-}
-
-form.is-style-homepage-rfi-custom > input.formpair {
-    border: 0;
-    border-radius: 15px;
-    box-sizing: border-box;
-    height: 4em;
-}
-
-form.is-style-homepage-rfi-custom > input.formpair.formpair-simple-left {
-    width: 57%;
-}
-
-form.is-style-homepage-rfi-custom > input.formpair.formpair-simple-right {
-    width: 39%;
-}
-
-form.is-style-homepage-rfi-custom > input.formpair[type="submit"] {
-    background-color: var(--wp--preset--color--contrast);
-}
-
-form.is-style-homepage-rfi-custom > input.formpair[type="submit"]:hover {
-    background-color: var(--wp--preset--color--base);
-}
-
-
-div.is-style-homepage-rfi-custom :is(.fo__label, .fo__header, .fo__nav) {
-    display: none;
-}
-
-div.is-style-homepage-rfi-custom body form.fo .fo__btn--submit::after {
-    content: none !important;
-}
-
-div.is-style-homepage-rfi-custom :is(form, #dummy-id) {
-    max-width: 100%;
-}
-
-div.is-style-homepage-rfi-custom .fo__wrap {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+.homepage-rfi-form div.row {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-div.is-style-homepage-rfi-custom :is(.fo__input, button, #dummy-id) {
-    border-radius: 15px;
+.homepage-rfi-form div.row > div {
+    display: flex;
+    justify-content: center;
 }
 
-div.is-style-homepage-rfi-custom .fo__body {
-    flex-grow: 10;
+.homepage-rfi-form div.row > div:not(.submit-button-fields) {
+    flex-grow: 20;
 }
 
-div.is-style-homepage-rfi-custom .fo__footer {
+.homepage-rfi-form div.row > div.submit-button-fields {
     flex-grow: 1;
 }
 
-div.is-style-homepage-rfi-custom .fo__footer button {
+.homepage-rfi-form div p {
     width: 100%;
-    margin-left: 1em;
+}
+.homepage-rfi-form p input {
+    box-sizing: border-box;
+    padding: 1em;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 15px;
+    width: 100%;
 }
 
-div.is-style-homepage-rfi-custom .fo__body .fo__input {
-    background-color: var(--wp--preset--color--primary);
+.homepage-rfi-form p {
+    margin: 5px 0;
 }
 
-div.is-style-homepage-rfi-custom .fo__footer {
+.homepage-rfi-form input:not(.wpcf7-submit) {
+    flex-basis: 200px;
+    opacity: 0.65;
 }
+
+.homepage-rfi-form input:not(.wpcf7-submit):is(:hover, :active, :focus) {
+    opacity: 1;
+}
+
+.homepage-rfi-form input.wpcf7-submit {
+    background-color: var(--wp--preset--color--contrast);
+    opacity: 0.9;
+}
+
+.homepage-rfi-form input.wpcf7-submit:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.homepage-rfi-form input.wpcf7-submit:active {
+    opacity: 0.5
+}
+
+.homepage-rfi-form .wpcf7-not-valid-tip {
+    margin: 0.75em 0;
+}
+
+.homepage-rfi-form br {
+    display: none;
+}
+
+.wpcf7 .wpcf7-response-output {
+    font-family: var(--wp--preset--font-family--comfortaa);
+    border-radius: 15px;
+}
+
+
+
 
 
 
