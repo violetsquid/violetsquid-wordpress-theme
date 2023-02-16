@@ -32,3 +32,18 @@ wp.blocks.registerBlockVariation(
     ]
   }
 );
+
+wp.blocks.registerBlockStyle( 'core/group', {
+  name: 'background-contrast',
+  label: 'Contrast',
+} );
+
+wp.blocks.registerBlockStyle( 'core/group', {
+  name: 'small-margins',
+  label: 'Small Margins',
+} );
+
+wp.blocks.registerBlockStyle( 'core/group', {
+  name: 'wide-margins',
+  label: 'Wide Margins',
+});

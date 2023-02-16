@@ -1,9 +1,21 @@
 :is(.wp-block-navigation__submenu-container, #dummy-id) {
     background-color: var(--wp--preset--color--base);
     color: inherit;
-    border: none;
+    border: 0px;
+    border-radius: 15px;
+    text-align: right;
 }
 
 :is(.wp-block-navigation__submenu-container, #dummy-id) a {
     justify-content: flex-end;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item:first-of-type {
+    border-radius: 15px 15px 0 0;
+}
+.wp-block-navigation__submenu-container .wp-block-navigation-item:last-of-type {
+    border-radius: 0 0 15px 15px;
+}
+.wp-block-navigation__submenu-container .wp-block-navigation-item:only-of-type {
+    border-radius: 15px;
 }

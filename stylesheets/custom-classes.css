@@ -1,38 +1,266 @@
-:is(.invert-color-theme, #dummy-id) {
-    background-color: var(--wp--preset--color--contrast);
-    color: var(--wp--preset--color--base);
+html, body {
+    overflow-x: hidden;
 }
 
-.invert-color-theme :is(hr, #dummy-id) {
-    color: var(--wp--preset--color--base);
+body {
+    animation: body-background-fade 0.2s easy-in-out;
 }
 
-.invert-color-theme :is(a, h1, h2, h3, h4, h5, h6, h7, h8, #dummy-id) {
-    background-color: inherit;
-    color: inherit;
+@keyframes body-background-fade {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background-color: var(--wp--preset--color--base);
+    }
+}
+
+
+
+:not(.is-style-overlapping) > :is(.wp-block-column) {
+    margin: 0 var(--wp--preset--spacing--20);
+}
+
+.wp-block-group.is-syle-wide-margins :is(.wp-block-columns, .wp-block-) {
+    max-width: var(--wp--preset--layout--wide-size);
+}
+
+:is(.wp-block-group, #dummy-id) {
+    box-sizing: border-box;
 }
 
 :is(.justify, #dummy-id) {
     text-align: justify;
 }
 
-:is(.wp-block-columns.is-style-overlapping, #dummy-id) .wp-block-column {
-    margin: 0 var(--wp--preset--spacing--20) 0 var(--wp--preset--spacing--20);
-    grid-row-start: 1;
+
+
+
+
+
+:is(.mktg-header, #dummy-id) {
+    min-height: 80svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-:is(.wp-block-columns.is-style-overlapping, #dummy-id) {
-    flex: none;
-    display: grid;
-    grid-template-columns: repeat(20, 5%);
+.mktg-header figure.invisible {
+    opacity: 0;
 }
 
-:is(.wp-block-columns.is-style-overlapping, #dummy-id) figure {
-    max-height: 60svh;
+.mktg-header figure.visible {
+    opacity: 1;
+    animation: img-fade 0.3s ease-in-out;
 }
 
-.wp-block-columns.is-style-overlapping.is-style-overlapping-left .wp-block-column:nth-child(1) { grid-column: 1 / 15; z-index: 100; background-color: rgba(0,0,0,0.15); border-radius: 15px; padding: var(--wp--preset--spacing--20); box-sizing: border-box; }
-.wp-block-columns.is-style-overlapping.is-style-overlapping-left .wp-block-column:nth-child(2) { grid-column: 10 / 20; }
 
-.wp-block-columns.is-style-overlapping.is-style-overlapping-right .wp-block-column:nth-child(1) { grid-column: 1 / 12; }
-.wp-block-columns.is-style-overlapping.is-style-overlapping-right .wp-block-column:nth-child(2) { grid-column: 5 / 20; z-index: 100; background-color: rgba(0,0,0,0.15); border-radius: 15px; padding: var(--wp--preset--spacing--20); box-sizing: border-box;}
+@keyframes img-fade {
+	0% {
+        transform: translateX(10px);
+		opacity: 0;
+    }
+	100% {
+        transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes img-hide {
+	0% {
+        transform: translateX(0px);
+		opacity: 1;
+    }
+	100% {
+        transform: translateX(10px);
+		opacity: 0;
+	}
+}
+
+@keyframes img-fade-left {
+	0% {
+        transform: translateX(-10px);
+		opacity: 0;
+    }
+	100% {
+        transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes img-hide-left {
+	0% {
+        transform: translateX(0px);
+		opacity: 1;
+    }
+	100% {
+        transform: translateX(-10px);
+		opacity: 0;
+	}
+}
+
+.fancy-hide.invisible {
+    opacity: 0;
+}
+
+.fancy-hide.visible {
+    animation: img-fade-left 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.fancy-hide.hidden {
+    animation: img-hide-left 0.3s ease-in-out;
+    opacity: 0;
+}
+
+
+
+div.is-style-homepage-rfi-custom {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: var(--wp--preset--font-family--comfortaa);
+    font-size: var(--wp--preset--font-size--medium);
+}
+
+@keyframes hover-opacity-fade-in {
+
+}
+
+div.is-style-homepage-rfi-custom :is(input, button) {
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 15px;
+    height: 3em;
+    padding: 1em;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+div.is-style-homepage-rfi-custom input {
+    opacity: 0.8;
+}
+
+div.is-style-homepage-rfi-custom button {
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--base);
+}
+
+div.is-style-homepage-rfi-custom :is(input:hover, input:active, input:focus) {
+    opacity: 1;
+}
+
+form.is-style-homepage-rfi-custom {
+    width: 100%;
+    flex-wrap: none;
+}
+
+form.is-style-homepage-rfi-custom * {
+    margin-right: 0;
+    margin-left: 0;
+    margin: 0;
+    padding: 1em;
+    font-family: var(--wp--preset--font-family--comfortaa);
+    font-size: var(--wp--preset--font-size--small);
+}
+
+form.is-style-homepage-rfi-custom label {
+    display: none;
+    margin: inherit;
+}
+
+form.is-style-homepage-rfi-custom > input.formpair {
+    border: 0;
+    border-radius: 15px;
+    box-sizing: border-box;
+    height: 4em;
+}
+
+form.is-style-homepage-rfi-custom > input.formpair.formpair-simple-left {
+    width: 57%;
+}
+
+form.is-style-homepage-rfi-custom > input.formpair.formpair-simple-right {
+    width: 39%;
+}
+
+form.is-style-homepage-rfi-custom > input.formpair[type="submit"] {
+    background-color: var(--wp--preset--color--contrast);
+}
+
+form.is-style-homepage-rfi-custom > input.formpair[type="submit"]:hover {
+    background-color: var(--wp--preset--color--base);
+}
+
+
+div.is-style-homepage-rfi-custom :is(.fo__label, .fo__header, .fo__nav) {
+    display: none;
+}
+
+div.is-style-homepage-rfi-custom body form.fo .fo__btn--submit::after {
+    content: none !important;
+}
+
+div.is-style-homepage-rfi-custom :is(form, #dummy-id) {
+    max-width: 100%;
+}
+
+div.is-style-homepage-rfi-custom .fo__wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+div.is-style-homepage-rfi-custom :is(.fo__input, button, #dummy-id) {
+    border-radius: 15px;
+}
+
+div.is-style-homepage-rfi-custom .fo__body {
+    flex-grow: 10;
+}
+
+div.is-style-homepage-rfi-custom .fo__footer {
+    flex-grow: 1;
+}
+
+div.is-style-homepage-rfi-custom .fo__footer button {
+    width: 100%;
+    margin-left: 1em;
+}
+
+div.is-style-homepage-rfi-custom .fo__body .fo__input {
+    background-color: var(--wp--preset--color--primary);
+}
+
+div.is-style-homepage-rfi-custom .fo__footer {
+}
+
+
+
+
+
+
+
+@keyframes roll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+
+}
+
+figure.is-style-homepage-tools-slider {
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+figure.is-style-homepage-tools-slider > figure {
+    margin: auto;
+    max-height: 50px;
+    aspect-ratio: auto;
+}
