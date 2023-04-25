@@ -1,0 +1,90 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+:is(.wp-block-violetsquid-window-sim, #dummy-id) {
+
+	$borderRadius: 10px;
+
+
+	box-shadow: 0 0 30px 0 rgb(0,0,10,0.7);
+	border-style: solid;
+	border-color: rgb(25,25,25);
+	border-width: 2px;
+	border-radius: $borderRadius;
+	min-height: 250px;
+	$normal-background-color: rgba(0,0,10,0.6);
+	$special-background-color: rgba(0,0,20,0.8);
+	background-color: $normal-background-color;
+
+	&:hover {
+		background-color: $special-background-color;
+		animation: switch-to-special-color 0.5s;
+	}
+
+	@keyframes switch-to-special-color {
+		0% {
+			background-color: $normal-background-color;
+		}
+		100% {
+			background-color: $special-background-color;
+		}
+	}
+
+	.sim-icons {
+
+
+		height: 65px;
+		background: var(--wp--preset--gradient--undersea-dark-blue);
+		border-radius: $borderRadius $borderRadius 0 0;
+		border-style: solid;
+		border-width: 1px;
+		border-color: rgb(25,25,25);
+		border-bottom: none;
+
+		ul {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			top: 0;
+			opacity: 0.7;
+	
+			li {
+	
+				&#sim-icon-circle-1 {
+					background-color: red;
+				}
+	
+				&#sim-icon-circle-2 {
+					background-color: orange;
+				}
+	
+				&#sim-icon-circle-3 {
+					background-color: lightgreen;
+				}
+	
+				display: inline-block;
+				position: relative;
+				top: 20px;
+				height: 15px;
+				width: 15px;
+				background-color: white;
+				border-radius: 50%;	
+				
+	
+			}
+		}
+	
+	}
+	
+
+	.content-container {
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding: var(--wp--preset--spacing--40);
+	}
+}

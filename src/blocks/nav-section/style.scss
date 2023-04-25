@@ -1,0 +1,47 @@
+:is(.wp-block-violetsquid-nav-section, #dummy-id) {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-items: flex-start; 
+	gap: 20px;
+	$borderRadius: 10px;
+
+	> div {
+		padding: 30px;
+		*:nth-child(1) {
+			margin-top: 0;
+		}
+	}
+
+	.vsqd-sidebar-nav {
+		flex-basis: 325px;
+		box-sizing: border-box;
+		background-color: var(--wp--preset--color--base);
+		border-radius: $borderRadius;
+		position: sticky;
+		top: 100px;
+
+		h2 {
+			font-size: 18px;
+			font-weight: 800;
+			text-transform: uppercase;
+		}
+
+		ul, li {
+			list-style-type: none;
+			list-style-position:inside;
+			margin:0;
+			padding:0;
+		}
+
+		li {
+			margin-top: 1em;
+		}
+	}
+
+	.vsqd-sidebar-main {
+		flex-basis: 70%;
+		border-radius: $borderRadius;
+		padding-top: 0;
+	}
+}

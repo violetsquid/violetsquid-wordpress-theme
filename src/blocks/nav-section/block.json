@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "violetsquid/nav-section",
+	"version": "0.1.0",
+	"title": "VioletSquid Navigation Section",
+	"category": "text",
+	"icon": "universal-access-alt",
+	"attributes": {
+		"message": {
+			"type": "string",
+			"default": "What makes you unique and valuable?"
+		}
+	},
+	"example": {},
+	"supports": {
+		"html": false,
+		"color": true,
+		"align": true,
+		"alignWide": true
+	},
+	"textdomain": "nav-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -37,6 +37,13 @@
 		"color": {
 			"custom": false,
             "customGradient": false,
+			"gradients": [
+                {
+                    "slug": "undersea-dark-blue",
+                    "gradient": "linear-gradient(5deg,rgb(0,0,15) 0%,var(--wp--preset--color--base) 95%,rgb(150,200,255) 135%)",
+                    "name": "Undersea dark blue"
+                }
+			],
 			"palette": [
 				{
 					"color": "rgb(0, 48, 71)",
@@ -302,7 +309,7 @@
 				},
 				{
 					"fluid": false,
-					"size": "3.25rem",
+					"size": "4rem",
 					"slug": "x-large"
 				},
 				{
@@ -319,6 +326,14 @@
 	},
 	"styles": {
 		"blocks": {
+			"violetsquid/nav-section": {
+				"spacing": {
+					"padding": {
+						"top": "var( --wp--preset--spacing--40 )",
+						"bottom": "var( --wp--preset--spacing--40 )"
+					}
+				}
+			},
 			"core/separator": {
 				"color": {
 					"text": "var(--wp--preset--color--contrast)"
@@ -642,7 +657,7 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--base)",
+			"gradient": "var(--wp--preset--gradient--undersea-dark-blue)",	
 			"text": "var(--wp--preset--color--primary)"
 		},
 		"elements": {
