@@ -13,7 +13,7 @@
 import { useBlockProps, RichText, innerBlocks } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
-import { InnerBlocks, ColorPalette, InspectorControls, PanelBody } from "@wordpress/block-editor";
+import { InnerBlocks } from "@wordpress/block-editor";
 
 
 /**
@@ -34,29 +34,25 @@ import './editor.scss';
  * @param {Function} param0.setAttributes
  * @return {WPElement} Element to render.
  */
+
+const NESTED_BLOCKS_TEMPLATE = [
+    [ 'violetsquid/overlapping-columns-nested', {} ],
+    [ 'violetsquid/overlapping-columns-nested', {} ],
+];
+
+
 export default function Edit( { attributes: { message, header }, setAttributes } ) {
-
-	const onChangeText = ( newHeader ) => {
-		setAttributes( { header: newHeader } );
-	};
-
+	const { title } = useSelect(
+		( select ) => select( 'core' ).getSite() ?? {}
+	);
 
 	return (
-		<div { ...useBlockProps() } class="vsqd-dynamic-page-header">
-                <InspectorControls key="setting">
-					<fieldset>
-                        <legend className="blocks-base-control__label">
-                            { __( 'Section header (h2)' ) }
-                        </legend>
-                        <RichText // Element Tag for Gutenberg standard colour selector
-							value={ header }
-                            onChange={ onChangeText } // onChange event callback
-                        />
-                    </fieldset>
-                </InspectorControls>
-			<div class="content-container">
-				<h2>{ header }</h2>
-				< InnerBlocks />
+		<div { ...useBlockProps() } >
+			<div class="content-container vsqd-overlap-columns-wrapper-container">
+				< InnerBlocks 
+					template={ NESTED_BLOCKS_TEMPLATE }
+					templateLock="insert"
+				/>
 			</div>
 		</div>
 	);

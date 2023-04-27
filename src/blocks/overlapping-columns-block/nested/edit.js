@@ -13,7 +13,7 @@
 import { useBlockProps, RichText, innerBlocks } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
-import { InnerBlocks, ColorPalette, InspectorControls, PanelBody } from "@wordpress/block-editor";
+import { InnerBlocks } from "@wordpress/block-editor";
 
 
 /**
@@ -35,28 +35,18 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit( { attributes: { message, header }, setAttributes } ) {
-
-	const onChangeText = ( newHeader ) => {
-		setAttributes( { header: newHeader } );
-	};
-
+	const { title } = useSelect(
+		( select ) => select( 'core' ).getSite() ?? {}
+	);
 
 	return (
-		<div { ...useBlockProps() } class="vsqd-dynamic-page-header">
-                <InspectorControls key="setting">
-					<fieldset>
-                        <legend className="blocks-base-control__label">
-                            { __( 'Section header (h2)' ) }
-                        </legend>
-                        <RichText // Element Tag for Gutenberg standard colour selector
-							value={ header }
-                            onChange={ onChangeText } // onChange event callback
-                        />
-                    </fieldset>
-                </InspectorControls>
+		<div { ...useBlockProps() } >
 			<div class="content-container">
-				<h2>{ header }</h2>
-				< InnerBlocks />
+				<h2 class="nest-explainer">I'm a column in the overlapping columns block...</h2>
+				<hr></hr>
+				< InnerBlocks 
+					templateLock= { false }
+				/>
 			</div>
 		</div>
 	);

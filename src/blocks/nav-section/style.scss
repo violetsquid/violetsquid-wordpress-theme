@@ -1,9 +1,4 @@
 :is(.wp-block-violetsquid-nav-section, #dummy-id) {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-items: flex-start; 
-	gap: 20px;
 	$borderRadius: 10px;
 
 	> div {
@@ -13,35 +8,60 @@
 		}
 	}
 
-	.vsqd-sidebar-nav {
-		flex-basis: 325px;
-		box-sizing: border-box;
-		background-color: var(--wp--preset--color--base);
-		border-radius: $borderRadius;
-		position: sticky;
-		top: 100px;
-
-		h2 {
-			font-size: 18px;
-			font-weight: 800;
-			text-transform: uppercase;
-		}
-
-		ul, li {
-			list-style-type: none;
-			list-style-position:inside;
-			margin:0;
-			padding:0;
-		}
-
-		li {
-			margin-top: 1em;
-		}
-	}
-
 	.vsqd-sidebar-main {
 		flex-basis: 70%;
 		border-radius: $borderRadius;
 		padding-top: 0;
+		text-shadow: 0 0 10px black;
+
+		> *:not(.vsqd-sidebar-nav, h2, figure, img) {
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+	
+		
+
+		figure, img {
+			margin: 1em;
+			&.alignright {
+				float: right;
+			}
+			&.alignleft {
+				float: left;
+			}
+		}
+
+		.vsqd-sidebar-nav {
+			max-width: 35%;
+			width: 325px;
+			float: left;
+			box-sizing: border-box;
+			background-color: var(--wp--preset--color--base);
+			border-radius: $borderRadius;
+			position: sticky;
+			top: 100px;
+			padding: 30px;
+			margin: 0 2em 1em 0;
+	
+			h3 {
+				color: var(--wp--preset--color--contrast);
+				font-size: 18px;
+				font-weight: 800;
+				text-transform: uppercase;
+			}
+	
+			ul, li {
+				list-style-type: none;
+				list-style-position:inside;
+				margin:0;
+				padding:0;
+			}
+	
+			li {
+				margin-top: 1em;
+			}
+		}
+	
 	}
+
 }

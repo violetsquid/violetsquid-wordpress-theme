@@ -20,33 +20,48 @@ if(!function_exists("createSlug")) {
 
 ?>
 <div <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>>
-	<div class="vsqd-sidebar-nav">
-		<h2>Find your section quicker...</h2>
-		<hr></hr>
-		<ul class="vsqd-sidebar-nav-list">
-		<?php 
-		$dom = new DOMDocument;
-		$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
-		if($list = $dom->getElementsByTagName("h3")) {
-			foreach ($list as $item) { ?>
-				<li><a href="#
-					<?php 
-						if ($id = $item->getAttribute('id')) {
-							echo $id;
-						} else {
-							$slug = createSlug($item->textContent) . "-" . rand();
-							$item->setAttribute('id', $slug);
-							echo $slug;
-						}
-					?>">
-				<?= $item->textContent ?></a></li>
-				<?php }
-			$content = $dom->saveHTML();
-		} else {}
-		?>
-		</ul>
-	</div>
 	<div class="vsqd-sidebar-main">
-    <?php echo $content ?>
+		<h2><?php
+		if ( isset( $attributes['header'] ) ) {
+			/**
+			 * The wp_kses_post function is used to ensure any HTML that is not allowed in a post will be escaped.
+			 *
+			 * @see https://developer.wordpress.org/reference/functions/wp_kses_post/
+			 * @see https://developer.wordpress.org/themes/theme-security/data-sanitization-escaping/#escaping-securing-output
+			 */
+			echo wp_kses_post( $attributes['header'] );
+		}
+		?></h2>
+		<div class="vsqd-sidebar-nav">
+			<h3>Dive deeper into this section...</h3>
+			<hr></hr>
+			<ul class="vsqd-sidebar-nav-list">
+			<?php $upNext = "up-next-" . rand() ?>
+			<?php 
+			$dom = new DOMDocument;
+			$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
+			if($list = $dom->getElementsByTagName("h3")) {
+				foreach ($list as $item) { ?>
+					<li><a href="#
+						<?php 
+							if ($id = $item->getAttribute('id')) {
+								echo $id;
+							} else {
+								$slug = createSlug($item->textContent) . "-" . rand();
+								$item->setAttribute('id', $slug);
+								echo $slug;
+							}
+						?>">
+					<?= $item->textContent ?></a></li>
+					<?php }
+				$content = $dom->saveHTML();
+			} else {}
+			?>
+			</ul>
+			<hr></hr>
+			<h3 class="vsqd-nav-section-up-next"><a href="#<?= $upNext ?>">Move down the page?</a></h3>
+		</div>
+		<?php echo $content ?>
+		<div class="end-of-nav-section" id="<?= $upNext ?>"></div>
 	</div>
 </div>
