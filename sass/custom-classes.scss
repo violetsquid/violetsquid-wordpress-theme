@@ -7,13 +7,14 @@ html, body {
 }
 
 body {
-    animation: body-background-fade 0.2s easy-in-out;
+    animation: body-background-fade 2s;
 }
 
 header .wp-block-group {
     flex-wrap: nowrap;
     gap: 5vw;
     justify-content: space-between;
+    animation: opacity-in 1s;
 }
 
 header .wp-block-group .wp-block-site-title {
@@ -65,7 +66,7 @@ nav.wp-block-navigation {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    animation: opacity-in 2s;
+    animation: opacity-in .5s;
 }
 
 @keyframes opacity-in {
