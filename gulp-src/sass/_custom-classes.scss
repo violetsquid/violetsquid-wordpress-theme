@@ -23,6 +23,7 @@ header.wp-block-template-part {
     position: absolute;
     z-index:100;
     width: 100%;
+    top: 30px;
 }
 
 header .wp-block-group {
@@ -172,6 +173,7 @@ nav.wp-block-navigation {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
 
 .homepage-rfi-form div.row > div {
@@ -195,8 +197,10 @@ nav.wp-block-navigation {
     padding: 1em;
     font-size: inherit;
     font-family: inherit;
+    border: 2px solid var(--wp--preset--color--contrast);
     border-radius: 15px;
     width: 100%;
+    height: 3.5em;
 }
 
 .homepage-rfi-form p {
