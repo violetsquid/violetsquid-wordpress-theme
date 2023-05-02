@@ -207,22 +207,45 @@ nav.wp-block-navigation {
     margin: 5px 0;
 }
 
-.homepage-rfi-form input:not(.wpcf7-submit) {
-    flex-basis: 200px;
-    opacity: 0.65;
-}
+.homepage-rfi-form input {
 
-.homepage-rfi-form input:not(.wpcf7-submit):is(:hover, :active, :focus) {
-    opacity: 1;
+    $opacity: 0.7;
+    opacity: $opacity;
+    animation: input-opacity-out 0.5s;
+
+    &:is(:hover, :active, :focus) {
+        opacity: 1;
+        animation: input-opacity-in 0.1s;
+    }
+    
+    @keyframes input-opacity-in {
+        0% {
+            opacity: $opacity;
+        } 100% {
+            opacity: 1
+        }
+    }
+
+    @keyframes input-opacity-out {
+        0% {
+            opacity: 1;
+        } 100% {
+            opacity: $opacity;
+        }
+    }
+
+
+    &:not(.wpcf7-submit) {
+        flex-basis: 200px;
+    }
 }
 
 .homepage-rfi-form input.wpcf7-submit {
-    background-color: var(--wp--preset--color--contrast);
-    opacity: 0.9;
+    background-color: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--contrast);
 }
 
 .homepage-rfi-form input.wpcf7-submit:hover {
-    opacity: 1;
     cursor: pointer;
 }
 
