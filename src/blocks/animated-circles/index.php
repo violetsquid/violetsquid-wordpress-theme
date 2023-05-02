@@ -33,6 +33,9 @@ add_action( 'init', 'animated_rising_circles_block_block_init' );
  * @param WP_Block $block_instance The instance of the WP_Block class that represents the block being rendered.
  */
 
+function animated_rising_circles_enqeue_block_scripts() {
+	wp_enqueue_script( 'jquery-animated-circles', get_theme_file_uri( '/assets/js/jquery-animated-circles.js'), array( 'jquery' ), '1.0.0', true);
+}
 
 function animated_rising_circles_block_render_callback( $attributes, $content, $block_instance ) {
 	ob_start();
