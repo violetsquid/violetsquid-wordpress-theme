@@ -58,8 +58,10 @@ if(!function_exists("createSlug")) {
 			} else {}
 			?>
 			</ul>
+			<div class="up-next">
 			<hr></hr>
 			<h3 class="vsqd-nav-section-up-next"><a href="#<?= $upNext ?>">Move down the page?</a></h3>
+			</div>
 		</div>
 		<?php echo $content ?>
 		<div class="end-of-nav-section" id="<?= $upNext ?>"></div>

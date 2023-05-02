@@ -12,7 +12,6 @@
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
     "start": "wp-scripts start"
-
   },
   "repository": {
     "type": "git",
@@ -31,12 +30,11 @@
   },
   "homepage": "https://github.com/violetsquid/violetsquid-wordpress-theme#readme",
   "devDependencies": {
-    "@wordpress/scripts": "^25.5.1",
+    "@wordpress/scripts": "^26.3.0",
     "copy-webpack-plugin": "^11.0.0",
     "cssnano": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.1.0",
-    "node-sass": "^8.0.0"
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-postcss": "^9.0.1"
   }
 }

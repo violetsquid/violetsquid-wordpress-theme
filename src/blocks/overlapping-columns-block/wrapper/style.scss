@@ -22,10 +22,18 @@
 				box-sizing: border-box;
 				position: relative;
 				top: 3%;
+
+				@media only screen and (max-width: 950px) {
+					grid-column: 1/20
+				}
 			}
 
 			&:nth-of-type(2) {
 				grid-column: 10 / 20;
+
+				@media only screen and (max-width: 950px) {
+					grid-column: 10/20
+				}
 			}
 
 		}

@@ -10,6 +10,21 @@ body {
     animation: body-background-fade 2s;
 }
 
+.wp-site-blocks {
+    padding-top: 0;
+
+    :is(main.wp-block-group, #dummy-id) {
+        margin-top: 0;
+        padding-top: 100px;
+    }
+}
+
+header.wp-block-template-part {
+    position: absolute;
+    z-index:100;
+    width: 100%;
+}
+
 header .wp-block-group {
     flex-wrap: nowrap;
     gap: 5vw;
@@ -62,7 +77,7 @@ nav.wp-block-navigation {
 
 
 :is(.mktg-header, #dummy-id) {
-    min-height: 80svh;
+    min-height: calc(93svh - 100px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

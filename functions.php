@@ -1,10 +1,7 @@
 <?php
 
 function add_theme_scripts() {
-	wp_enqueue_style( 'custom-classes', get_template_directory_uri() . '/stylesheets/custom-classes.css');
-	wp_enqueue_style( 'navigation-submenu', get_template_directory_uri() . '/stylesheets/navigation-submenu.css');
-	wp_enqueue_style( 'overlapping-columns', get_template_directory_uri() . '/stylesheets/overlapping-columns.css');
-	wp_enqueue_script( 'fancy-reveal', get_theme_file_uri( '/assets/js/fancy-reveal.js'), array( 'jquery' ), '1.0.0', true);
+	wp_enqueue_style( 'vsqd-theme-core', get_template_directory_uri() . '/assets/css/vsqd-theme-core.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
