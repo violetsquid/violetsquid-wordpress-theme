@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "violetsquid/window-sim",
+	"version": "0.1.0",
+	"title": "VioletSquid Window Simulation Container",
+	"category": "text",
+	"icon": "universal-access-alt",
+	"attributes": {},
+	"example": {},
+	"supports": {
+		"html": false,
+		"color": true,
+		"align": true,
+		"alignWide": true
+	},
+	"textdomain": "window-sim",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

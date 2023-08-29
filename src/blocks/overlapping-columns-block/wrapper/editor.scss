@@ -1,0 +1,25 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+:is(.wp-block-violetsquid-overlapping-columns-wrapper, #dummy-id) {
+
+	.vsqd-overlap-columns-wrapper-container {
+		> .block-editor-inner-blocks {
+			> div {
+				display: flex;
+				flex-direction: row;
+				gap: 20px;
+				width: 100%;
+
+				.wp-block-violetsquid-overlapping-columns-nested {
+					flex-grow: 0;
+					width: 50%;
+				}
+
+			}
+		}
+	}
+}

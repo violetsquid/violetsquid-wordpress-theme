@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "violetsquid/overlapping-columns-wrapper",
+	"version": "0.1.0",
+	"title": "VioletSquid Overlapping Columns",
+	"category": "text",
+	"icon": "universal-access-alt",
+	"attributes": {},
+	"example": {},
+	"supports": {
+		"html": false,
+		"color": true,
+		"align": true,
+		"alignWide": true
+	},
+	"textdomain": "overlapping-columns-wrapper",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

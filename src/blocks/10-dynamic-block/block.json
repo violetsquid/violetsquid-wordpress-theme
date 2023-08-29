@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "violetsquid/page-hero",
+	"version": "0.1.0",
+	"title": "VioletSquid Page Header",
+	"category": "text",
+	"icon": "universal-access-alt",
+	"attributes": {
+		"message": {
+			"type": "string",
+			"default": "What makes you unique and valuable?"
+		},
+		"header": {
+			"type": "string",
+			"default": "Who are you?"
+		}
+	},
+	"example": {
+		"attributes": {
+			"message": "Professionally managed hosting, search optimization, user experience, and data-driven digital marketing for businesses of every size.",
+			"header": "Web and digital marketing experts at your fingertips."
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "dynamic-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
