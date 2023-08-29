@@ -1,4 +1,9 @@
 @use '_animated-circles.scss' as *;
+@use '_header-nav.scss' as *;
 @import '_custom-classes.scss';
 @import '_navigation-submenu.scss';
 @import '_overlapping-columns.scss';
+
+main.wp-block-group {
+	min-height: 95vh;
+}

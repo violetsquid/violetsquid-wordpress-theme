@@ -18,3 +18,12 @@ function theme_custom_blocks() {
 	require get_theme_file_path( '/build/blocks/index.php' );
 }
 theme_custom_blocks();
+
+function register_vsqd_menus() {
+    register_nav_menus(
+        array(
+        'vsqd-header-menu' => __( 'VioletSquid Header Menu' )
+        )
+    );
+}
+add_action( 'init', 'register_vsqd_menus' );

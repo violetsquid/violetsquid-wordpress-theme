@@ -19,31 +19,6 @@ body {
     }
 }
 
-header.wp-block-template-part {
-    position: absolute;
-    z-index:100;
-    width: 100%;
-    top: 30px;
-}
-
-header .wp-block-group {
-    flex-wrap: nowrap;
-    gap: 5vw;
-    justify-content: space-between;
-    animation: opacity-in 1s;
-}
-
-header .wp-block-group .wp-block-site-title {
-    text-shadow: 0 0 30px black;
-}
-
-nav.wp-block-navigation {
-    padding: 15px 25px;
-    border-radius: 15px;
-    flex-grow: 0;
-    text-transform: lowercase;
-    box-shadow: 0 0 30px rgba(0,0,0,0.6);
-}
 
 @keyframes body-background-fade {
     0% {
@@ -82,10 +57,10 @@ nav.wp-block-navigation {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    animation: opacity-in .5s;
+    animation: mktg-header-opacity-in .5s;
 }
 
-@keyframes opacity-in {
+@keyframes mktg-header-opacity-in {
     0% {
         opacity: 0;
     } 25% {
