@@ -1,0 +1,40 @@
+{
+  "name": "violetsquid",
+  "version": "1.0.0",
+  "description": "The violetsquid theme is based on Twenty Twenty-Three from by WordPress. Twenty Twenty-Three is designed to take advantage of the new design tools introduced in WordPress 6.1. With a clean, blank base as a starting point, this default theme includes ten diverse style variations created by members of the WordPress community. Whether you want to build a complex or incredibly simple website, you can do it quickly and intuitively through the bundled styles or dive into creation and full customization yourself.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "gulp build && wp-scripts build --webpack-copy-php",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/violetsquid/violetsquid-wordpress-theme.git"
+  },
+  "keywords": [
+    "theme",
+    "wordpress",
+    "full-site",
+    "editor"
+  ],
+  "author": "violetsquid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/violetsquid/violetsquid-wordpress-theme/issues"
+  },
+  "homepage": "https://github.com/violetsquid/violetsquid-wordpress-theme#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.3.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cssnano": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-postcss": "^9.0.1"
+  }
+}

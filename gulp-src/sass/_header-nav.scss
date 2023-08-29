@@ -1,0 +1,152 @@
+header .vsqd-header-bar {
+        position: absolute;
+        z-index:100;
+        width: 100%;
+        top: 30px;
+        
+        $dimOpacity: 0.6;
+
+        $breakpointSmall: 900px;
+
+        flex-wrap: nowrap;
+        gap: 5vw;
+        justify-content: space-between;
+        animation: mktg-header-opacity-in 1s;
+
+        
+        .header-bar-main {
+
+            @media only screen and (max-width: $breakpointSmall) {
+                justify-content: space-between;
+                width: 100%;
+            }        
+    
+            nav.vsqd-header-nav {
+
+                padding: 15px 25px;
+                border-radius: 15px;
+                flex-grow: 0;
+                text-transform: lowercase;
+                font-size: var(--wp--preset--font-size--medium);
+                font-family: var(--wp--preset--font-family--comfortaa);
+                color: var(--wp--preset--color--contrast);   
+                max-width: 100%;
+                box-sizing: border-box;                
+    
+                .vsqd-menu {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 2em;
+                    margin: 0;
+                    padding: 0;
+        
+                    li {
+                        list-style-position: inside;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+    
+                }
+    
+                @media only screen and (max-width: $breakpointSmall) {
+                    position: absolute;
+                    top: 100px;
+                    left: 0;
+                    width: 100%;
+                    
+                    .vsqd-menu {
+                        display: none;
+                        justify-content: center;
+                        flex-direction: column;
+                        font-size: var(--wp--preset--font-size--large);
+                    }
+
+                }    
+            }
+
+            .vsqd-mobile-nav-button {
+
+                fill: var(--wp--preset--color--contrast);
+
+                @media only screen and (min-width: $breakpointSmall) {
+                    display: none;
+                    position: fixed;
+
+                }
+        
+                @media only screen and (max-width: $breakpointSmall) {
+                    display: unset;
+                }
+
+                &:hover {
+                    svg {
+                        rect {
+                            transform: rotate(90);
+                        }
+                    }
+                }
+
+                svg {
+                    $size: 2em;
+                    height: $size;
+                    width: $size;
+
+                    rect {
+                        height: 15px;
+                    }
+                }
+            }
+        }
+
+        .header-bar-extra {
+            @media only screen and (max-width: $breakpointSmall) { 
+                display: none;
+            }
+        }
+
+        .wp-block-site-title {
+            text-shadow: 0 0 30px black;
+        }
+
+        .vsqd-header-button {
+            display: flex;
+            opacity: $dimOpacity;
+            border-radius: 15px;
+            animation: header-button-opacity-in reverse 0.25s;
+            min-width: min-content;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+            a {
+                height: 100%;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 1em;
+                background-color: var(--wp--preset--color--base);
+                color: var(--wp--preset--color--contrast);
+                border: var(--wp--preset--color--contrast) 2px solid;
+                overflow-wrap: normal;
+                word-break: unset;
+                display: flex;
+            }
+
+            &:hover, &:focus, &:focus-within {
+                opacity: 1;
+                animation: header-button-opacity-in 0.5s;
+            }
+
+            @keyframes header-button-opacity-in {
+                0% {
+                    opacity: $dimOpacity;
+                } 100% {
+                    opacity: 1;
+                }
+            }
+        
+        }
+
+    }
+
